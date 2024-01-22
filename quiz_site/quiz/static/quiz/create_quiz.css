@@ -41,13 +41,14 @@ body {
     color: white;
     font-family: Roboto;
     background-color: #232323;
-    font-size: 40px;
-    width: 500px;
-    border: 2px solid white;
+    font-size: 35px;
+    width: 300px;
+    border: 1px solid white;
     padding-left: 10px;
-    border-radius: 20px;
-
+    border-radius: 15px;
 }
+
+
 
 .quiz_name_box:hover {
     border: 2px solid #61bf8a;
@@ -69,11 +70,10 @@ body {
     font-family: Roboto;
     background-color: #232323;
     font-size: 40px;
-    width: 295px;
+    width: 100px;
     border: 2px solid white;
     border-radius: 20px;
     padding-left: 10px;
-
 
 }
 

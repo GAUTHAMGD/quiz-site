@@ -1,7 +1,6 @@
 from django import forms
-
 from django.core.exceptions import ValidationError
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 # form to create a new quiz
 class CreateQuizForm(forms.Form):
@@ -42,8 +41,8 @@ class CreateQuestionForm(forms.Form):
     choice3_text = forms.CharField(max_length=300, label="Choice 3", widget=forms.TextInput(attrs={'class': 'choice_box'}))
     choice3_correctness = forms.BooleanField(label="Choice 3 Correct?", required=False, widget=forms.CheckboxInput(attrs={'class': 'choice_correct_box'}))
 
-    choice4_text = forms.CharField(max_length=300, label="Choice 4", widget=forms.TextInput(attrs={'class': 'choice_box'}))
-    choice4_correctness = forms.BooleanField(label="Choice 4 Correct?", required=False, widget=forms.CheckboxInput(attrs={'class': 'choice_correct_box'}))
+    #choice4_text = forms.CharField(max_length=300, label="Choice 4", widget=forms.TextInput(attrs={'class': 'choice_box'}))
+    #choice4_correctness = forms.BooleanField(label="Choice 4 Correct?", required=False, widget=forms.CheckboxInput(attrs={'class': 'choice_correct_box'}))
 
     # makes sure that exactly one answer is selected to be true
     def clean(self):
@@ -51,9 +50,9 @@ class CreateQuestionForm(forms.Form):
         choice1_answer = self.cleaned_data["choice1_correctness"]
         choice2_answer = self.cleaned_data["choice2_correctness"]
         choice3_answer = self.cleaned_data["choice3_correctness"]
-        choice4_answer = self.cleaned_data["choice4_correctness"]
+        #choice4_answer = self.cleaned_data["choice4_correctness"]
 
-        answer_list = [choice1_answer, choice2_answer, choice3_answer, choice4_answer]
+        answer_list = [choice1_answer, choice2_answer, choice3_answer,]# choice4_answer
 
         print(answer_list)
 

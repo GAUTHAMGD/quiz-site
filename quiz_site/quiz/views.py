@@ -203,8 +203,8 @@ def create_question(request, quiz_id, question_id):
             choice3 = form.cleaned_data["choice3_text"]
             choice3_correctness = form.cleaned_data["choice3_correctness"]
 
-            choice4 = form.cleaned_data["choice4_text"]
-            choice4_correctness = form.cleaned_data["choice4_correctness"]
+            #choice4 = form.cleaned_data["choice4_text"]
+            #choice4_correctness = form.cleaned_data["choice4_correctness"]
 
             # creates question in quiz
             question = Question(quiz=quiz, question_text=question_text, question_num=question_id)
@@ -214,7 +214,7 @@ def create_question(request, quiz_id, question_id):
             question.choice_set.create(choice_text=choice1, correct=choice1_correctness)
             question.choice_set.create(choice_text=choice2, correct=choice2_correctness)
             question.choice_set.create(choice_text=choice3, correct=choice3_correctness)
-            question.choice_set.create(choice_text=choice4, correct=choice4_correctness)
+            #question.choice_set.create(choice_text=choice4, correct=choice4_correctness)
 
             # redirect to home if done or next create question page if not
             if question_id == quiz.num_questions:
