@@ -25,7 +25,7 @@ SECRET_KEY = '*wl&@!mr$lsao7z^f9$6z%v1gsc$w0l!8%g28_+c9&dg7j-5u-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://quiz-site-6dpl.onrender.com']
 
 
 # Application definition
